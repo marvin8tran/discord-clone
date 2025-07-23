@@ -37,7 +37,7 @@ export const DeleteChannelModal = () => {
       await axios.delete(url);
       onClose();
       router.refresh();
-      router.push(`/servers/${server?.id}`);
+      //router.push(`/servers/${server?.id}`);   if inChannel then do this??
     } catch (error) {
       console.log(error);
     } finally {
