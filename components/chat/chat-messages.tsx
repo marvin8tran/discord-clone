@@ -83,11 +83,14 @@ export const ChatMessages = ({
                 key={message.id}
                 id={message.id}
                 currentMember={member}
+                member={message.member}
                 content={message.content}
                 fileUrl={message.fileUrl}
                 deleted={message.deleted}
                 timestamp={format(new Date(message.createdAt), DATE_FORMAT)}
-                isUpdated={message.updatedAt}
+                isUpdated={message.updatedAt !== message.createdAt}
+                socketUrl={socketUrl}
+                socketQuery={socketQuery}
               />
             ))}
           </Fragment>
