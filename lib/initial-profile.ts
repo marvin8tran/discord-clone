@@ -1,6 +1,6 @@
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import { InitialModal } from "@/components/modals/initial-modal";
+
 
 import { db } from "@/lib/db";
 
